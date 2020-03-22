@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>MyRecipes</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h1>MyRecipes</h1>
+        {{range .Recipes}}
+            <p>Recipe: {{.Title}}</p>
+        {{end}}
+    </body>
+</html>
