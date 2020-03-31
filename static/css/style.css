@@ -1,0 +1,95 @@
+:root {
+    --color-primary: #590E0A;
+    --color-primary-dark: #340000;
+    --color-primary-light: #8b3b31;
+    --color-onprimary: #FFF;
+    --color-secondary: #E0B36C;
+    --color-secondary-dark: #ac843f;
+    --color-secondary-light: #ffe59b;
+    --color-onsecondary: #000;
+    --color-background: #ECECEC;
+    --color-onbackground: #000;
+    --color-surface: #FFF;
+    --color-onsurface: #000;
+    --color-error: #F00;
+    --color-onerror: #FFF;
+}
+
+body {
+    background-color: var(--color-background);
+    position: relative;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: var(--color-primary);
+}
+
+p, h1, h2, li, a {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 10px 30px 1px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: var(--color-onprimary);
+}
+
+body p {
+    color: var(--color-onbackground)
+}
+
+article p {
+    color: var(--color-onsurface)
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+article {
+    background-color: var(--color-surface);
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    flex: 1;
+}
+
+a:link {
+    color: var(--color-onprimary);
+}
+
+a:visited {
+    color: var(--color-onprimary);
+}
+
+a:hover {
+    color: var(--color-onprimary);
+}
+
+a:active {
+    color: var(--color-secondary);
+}
+
+.menu-item {
+    font-size: 16pt;
+}

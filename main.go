@@ -74,11 +74,12 @@ func handleMain(w http.ResponseWriter, r *http.Request) {
 	data := struct {
 		Recipes []Recipe
 	}{recipes}
-	tmpl := template.Must(template.ParseFiles("main.html"))
+	tmpl := template.Must(template.ParseFiles("templates/main.html"))
 	tmpl.Execute(w, data)
 }
 
 func main() {
 	http.HandleFunc("/", handleMain)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }

@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <title>MyRecipes</title>
+        <meta charset="utf-8"/>
+        <link href="../static/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>MyRecipes</h1>
+            <div class="menu">
+                <a class="menu-item" href="">+</a>
+            </div>
+        </header>
+        <main>
+            {{range .Recipes}}
+                <article>
+                    <h2>{{.Title}}</h2>
+                    {{if ne .Photo ""}}
+                        <img src="data:image/png;base64,{{.Photo}}" alt="photo"/>
+                    {{end}}
+                    <ul>
+                        {{range .Ingredients}}
+                            <li>{{.Name}}, {{.Count}}</li>
+                        {{end}}
+                    </ul>
+                    <p>{{.Text}}</p>
+                </article>
+            {{end}}
+        </main>
+        <footer>Created by lider</footer>
+    </body>
+</html>
