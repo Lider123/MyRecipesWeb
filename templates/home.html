@@ -1,0 +1,23 @@
+{{define "title"}}MyRecipes::Home{{end}}
+{{define "meta"}}{{end}}
+{{define "header"}}MyRecipes{{end}}
+{{define "actions-header"}}{{end}}
+{{define "menu"}}
+    <a class="menu-item" href="/recipes/add">+</a>
+{{end}}
+{{define "content"}}
+    {{range .Recipes}}
+        <article>
+            <h2>{{.Title}}</h2>
+            {{if ne .Photo ""}}
+                <img src="data:image/png;base64,{{.Photo}}" alt="photo"/>
+            {{end}}
+            <ul>
+                {{range .Ingredients}}
+                    <li>{{.Name}}, {{.Count}}</li>
+                {{end}}
+            </ul>
+            <p>{{.Text}}</p>
+        </article>
+    {{end}}
+{{end}}
