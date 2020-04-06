@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{template "title" .}}</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link href="../static/css/style.css" rel="stylesheet">
+    {{template "meta" .}}
+</head>
+<body>
+    <header>
+        <div class="actions-header">
+            {{template "actions-header" .}}
+        </div>
+        <h1>{{template "header" .}}</h1>
+        <div class="menu">
+            {{template "menu" .}}
+        </div>
+    </header>
+    <main>
+        {{template "content" .}}
+    </main>
+    <footer>Created by lider</footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{{define "title"}}MyRecipes::Add{{end}}
+{{define "meta"}}
+    <script src="../static/js/add-recipes.js"></script>
+{{end}}
+{{define "header"}}Add recipe{{end}}
+{{define "actions-header"}}
+    <a href="/">Home</a>
+{{end}}
+{{define "menu"}}{{end}}
+{{define "content"}}
+    <form id="form-recipe" action="/recipes" method="post">
+        <div>
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="Title"/>
+        </div>
+        <div>
+            <label for="description">Description</label><br>
+            <textarea id="description" name="Text"></textarea>
+        </div>
+        <div>
+            <label>Ingrediens: <a onclick="addIngredientField()">+</a></label>
+            <div id="ingredients"></div>
+        </div>
+        <div>
+            <input type="submit" value="Save"/>
+        </div>
+    </form>
+{{end}}
