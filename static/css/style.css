@@ -15,6 +15,10 @@
     --color-onerror: #FFF;
 }
 
+* {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
 body {
     background-color: var(--color-background);
     position: relative;
@@ -23,10 +27,6 @@ body {
 
 header, footer {
     background-color: var(--color-primary);
-}
-
-p, h1, h2, li, a {
-    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
 header {
